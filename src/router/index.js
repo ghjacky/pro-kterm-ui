@@ -7,9 +7,9 @@ const routes = [
     component: () => import("@/components/Layout"),
     children: [
       {
-        path: "podlog",
-        name: "PodLog",
-        component: () => import("@/components/PodLog"),
+        path: "logstreaming",
+        name: "LogStreaming",
+        component: () => import("@/components/LogStreaming"),
       },
       {
         path: "webterminal",

@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       socket: null,
-      socketURI: "ws://127.0.0.1:55190/ws/podexec/logapp-deployment-65bd79bdb9-nlm9g?namespace=default&container=logapp",
+      socketURI: "ws://127.0.0.1:3003/ws/container/exec/whizzer_10-100-248-128?dproxy=tcp://10.100.248.2:8001",
     };
   },
   methods: {

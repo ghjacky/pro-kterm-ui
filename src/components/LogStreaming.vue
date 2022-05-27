@@ -1,5 +1,5 @@
 <template>
-  <div id="podlog">
+  <div id="LogStreaming">
     <div class="container">
       <div class="log-bar"></div>
       <div class="log-pane">
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "PodLog",
+  name: "LogStreaming",
   props: {},
   data() {
     return {
@@ -22,7 +22,7 @@ export default {
     };
   },
   created() {
-    this.connection = new WebSocket("ws://127.0.0.1:61611/ws/podlog/logapp-deployment-65bd79bdb9-nlm9g?namespace=default&container=logapp");
+    this.connection = new WebSocket("ws://127.0.0.1:3003/ws/container/log/dproxy?dproxy=tcp://127.0.0.1:8001");
 
     this.connection.onmessage = (ev) => {
       console.log(ev.data);
@@ -34,7 +34,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#podlog {
+#LogStreaming {
   margin: 0 auto;
   text-align: center;
   background-color: #30363b;
